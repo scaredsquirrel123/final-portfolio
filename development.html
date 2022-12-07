@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			 <!-- Required meta tags -->
+			 <meta charset="utf-8">
+			 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		 
+			
+			 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Yesteryear&display=swap" rel="stylesheet">
+			 <script src="https://kit.fontawesome.com/db0609e0b9.js" crossorigin="anonymous"></script>
+		 
+			 <link rel="stylesheet" href="styles.css">
+		 
+			 <title>Development</title>
+		</head>
+		<body>
+
+		<nav>
+			<a href="index.html" id="logo">km</a>
+			<ul id="nav-ul">
+				<li id="nav-li">
+					<a href="index.html">PORTFOLIO</a>
+				</li>
+				<li id="nav-li">
+					<a href="about.html">ABOUT</a>
+				</li>
+				<li id="nav-li">
+					<a href="#link-to-resume">RESUME</a>
+				</li>
+			</ul>
+		</nav>
+	  
+	<div id="pages">
+		<div>
+			<a href="index.html"><span style="color: #C8E9DD;">
+				<i class="fa-solid fa-arrow-left"></i></span></a>
+			<h1 id="d-page-h1">Development</h1>
+			
+			<div>
+				<h2 class="page-h2" id="text-3" style="margin-bottom: 0.5em;">Project Introduction</h2>
+				<p>
+					Development is an assignment where students individually practice creating a webpage in ReactJS.
+                    In this assignment, I developed an interactive Squishmallow interface using components and then tied these components to an internal data state. I created a list-based interface, which allowed users to sort, filter, and aggregate components.
+				</p>
+			  </div>
+
+			<h2 class="page-h2" id="text-3" style="margin-bottom: 0.5em;">Development Features</h2>
+            <ul>
+                <li id="bullet">Two Filtering Categories: "Filter By Type" and "Filter By Rarity"</li>
+                <li id="bullet">Sorting Features: "A to Z", "Price: Low to High", and "Price: High to Low"</li>
+                <li id="bullet">Aggregator Section: Contains items the user added to the aggregator through clicking the "Favorite" button and aggregation of total cost</li>
+                <li id="bullet">Twelve Squishmallow item cards</li>
+            </ul>  
+
+            <a target="_blank" href="https://scaredsquirrel123.github.io/development/" style="text-decoration: underline #C8E9DD 2px;"><h2 class="page-h2" id="text-3" style="margin-bottom: 0.5em;">Link to Development</h2></a>
+            <center><embed src="https://scaredsquirrel123.github.io/development/" style="width: 80%; height: 80vh;"></center>
+
+            <a target="_blank" href="https://github.com/scaredsquirrel123/development-submission" style="text-decoration: underline #C8E9DD 2px;"><h2 class="page-h2" id="text-3" style="margin-bottom: 0.5em;">Link to Github Repository</h2></a>
+            <h2 class="page-h2" id="text-3" >Github README</h2>
+
+            <h3 class="page-h3" id="border-green">Goal and Value of the Application</h3>
+
+            <p>This application is a Squishmallow collection webpage. The goal is for the user
+            to be able to be able to sort and filter their Squishmallows and also favorite
+            their favorite Squishmallows and display them accordingly. (Sorting is based on
+            either name or price, and filtering is based on type or rarity). The value of my
+            application is for Squishmallow fans like myself! I would find it convenient to
+            view my Squishmallows digitally, especially since I can't carry all of them
+            on the plane with me :'( This could also be replicated for other collectible
+            items too like Pokemon cards, coins, etc. so that collectors can have their
+            items organized with them wherever they go.</p>
+
+			
+			<div>
+			<h3 class="page-h3" id="border-green">Usability Principles Considered</h3>
+
+			<button class="accordion" id="dropdown-green">Learnability</button>
+			<div class="panel-green">
+				<p>I felt that nav bars are intuitive and if they have an arrow,
+                that implies a dropdown menu. Also, I thought that the checkbox is also 
+                intuitive in the navbar because if you click it, you expect the favorites to
+                be displayed. Also, I tried to use clear terms such as Sort By, Filter By Type,
+                and Filter By Rarity and also in the dropdowns too, also including the filtering
+                conditions. </p>
+			</div>
+			<button class="accordion" id="dropdown-green">Memorability</button>
+			<div class="panel-green">
+				<p>The color palette and fonts were inspired by the ones that the
+                    Squishmallow brand uses. Also, I feel like once the user uses the page at least
+                    once, it is pretty simple to understand where everything is since the 
+                    functionality is all concentrated at the top with dropdowns and a checkbox.</p>
+			</div>
+			<button class="accordion" id="dropdown-green">Efficiency</button>
+			<div class="panel-green">
+				<p>Having all the sorting/filters in a line at the top with dropdown 
+                    menus makes it easy for the user to access since they do not have to scroll 
+                    around.</p>
+			</div>
+
+
+            <h3 class="page-h3" id="border-green">Organization of Components</h3>
+
+            <p>The App Component is the main component (created in App.js file) that acts as a 
+                container or parent for the other component that we created called SquishItem 
+                (created in SquishItem.js file). App is the parent component and it contains the
+                data for the page and the sorting and filtering functionalities. App 
+                communicates with its child SquishItem through props which I will go over in 
+                my next answer. SquishItem is a child component that returns the display card
+                for each Squishmallow and handles when the favorite button is clicked
+                and the corresponding functionality. </p>
+
+
+            <h3 class="page-h3" id="border-green">How Data is Passed Down Through Components</h3>
+
+            <p>Data is passed down from the App component (App.js) to the SquishItem component
+                (SquishItem.js) using props. In App.js we have filteredData.map((item) => ( 
+                 < SquishItem item={item} key={item.name} setTotal={setTotal} favProducts=
+                 {favProducts} setFavProducts={setFavProducts}/>))
+                In this case, we are calling the child component of SquishItem and displaying
+                on screen what is in the return statement from SquishItem for each item in
+                filteredData. Regarding how to get the data to fill each component, the data
+                from App.js is in the curly braces "{}" after the equals sign, and the 
+                name of the prop is before the equals sign. Then, in SquishItem, we are able
+                to access the data from App.js using the prop name. For example, if we
+                want to access the favProducts list in SquishItem, we can use prop.favProducts.</p>
+			
+            
+            <h3 class="page-h3" id="border-green">How the User Triggers State Changes</h3>
+                <button class="accordion" id="dropdown-green">Sorting</button>
+                <div class="panel-green">
+                    <p>Declaring the state for sort: const [sort, setSort] = useState("AtoZ");<br>
+                        Initially, sort is set to the default "A to Z". Then, whenever the user clicks
+                        an option in the "Sort By" navbar dropdown, an eventKey that corresponds
+                        to the selected option is passed into setSort, and then sort is set to that
+                        value. Then, the items displayed on the screen are sorted based on that option
+                        that sort has been set to (A to Z, Price: Low to High, and Price: High to Low)
+                        using the .sort() filter.</p>
+                </div>
+                <button class="accordion" id="dropdown-green">Filter By Type</button>
+                <div class="panel-green">
+                    <p>Declaring the state for type: const [type, setType] = useState("All");<br> 
+                        Next, the filters are set to their default "All," which does not filter out any
+                        items. For the "Filter By Type" filter, if a user clicks on an option
+                        in the "Filter By Type" navbar dropdown, an eventKey that corresponds to the
+                        selected option is passed into setType, and then type is set to that value.
+                        Then, the items are checked individually in the matchesFilterType function, and
+                        return true if the item's type is equal to the type that was just set and false 
+                        if not (or always return true if "All" is selected). Then, the items that have
+                        false returned are filtered out, and the ones that have true returned are
+                        displayed on the screen.</p>
+                </div>
+                <button class="accordion" id="dropdown-green">Filter By Rarity</button>
+                <div class="panel-green">
+                    <p>Declaring the state for rare: const [rare, setRare] = useState("All");<br>
+                        Similar to above, just replace type with rare! I created a "Filter By Rarity"
+                        navbar dropdown that each filter option has an eventKey which when the user
+                        clicks on the option, then the eventKey is passed into setRare that sets rare 
+                        to that value. Then, the items are returned either true or false depending 
+                        whether the item's rare value match the rare value that was set, and are removed
+                        from the screen if false.</p>
+                </div>
+                <button class="accordion" id="dropdown-green">Favorite Heart Button</button>
+                <div class="panel-green">
+                    <p>Clicking the favorite button with the heart at the bottom of each item triggers 
+                        multiple state changes. First, in SquishItem.js, I declared a state for the like
+                        setting: const [like, setLike] = useState(false);. False is when the item is not 
+                        favorited and true is when it is favorited. When the user clicks the heart, the
+                        opposite of what like is set to is passed into setLike, which is what triggers
+                        whether the empty heart (false) or the filled heart (true) is displayed on the
+                        button. <br><br>
+                        Also, favProduct is changed when the user clicks the button, and this
+                        state (declared as const [favProducts , setFavProducts] = useState([]);)
+                        was passed from App.js to SquishItem.js as a prop. When like is true, the item
+                        is added to the favProducts list, and if it is false, then the item (if it
+                        exists) is removed from the list. Also, whenever this happens, the total cost of
+                        all the favorited items is calculated and using setTotal (which is another state
+                        that we declared: const [total, setTotal] = useState(0);), the total is updated
+                        on the screen. 
+                        </p>
+                </div>
+                <button class="accordion" id="dropdown-green">Favorite Checkbox</button>
+                <div class="panel-green">
+                    <p>This favProducts list is then used in App.js when the Favorites checkbox 
+                        is checked. This is the final state that the user can trigger: 
+                        const [favChecked, setFavChecked] = useState(false);. Initially,
+                        the checkbox is unchecked/false and this leaves the screen unchanged, but
+                        when the checkbox gets checked, then favChecked turns to true. Then,
+                        similar to how we filtered, the items that aren't in the favProducts list are
+                        filtered out, and only the favProducts or items with the like button true are
+                        displayed.
+                        </p>
+                </div>
+
+
+			<div>
+				<h2 class="page-h2" id="text-3" style="margin-bottom: 0.5em;"> Project Conclusion</h2>
+				<p>
+				  In this project, I gained experience in ReactJS, using Components and States to create a Squishmallow sorting, filtering, and aggregating webpage.
+				</p>
+			  </div>
+
+			</div>
+
+			<div class="item7" style="margin-top: 2em; margin-bottom: 2em;">
+				<a href="#linked-in"><span style="color: #C8E9DD;"><i class="fa-brands fa-linkedin fa-2x"></i></span></a>
+				<a href="mailto:scaredsquirrel123@example.com"><span style="color: #C8E9DD;"><i class="fa-solid fa-envelope fa-2x"></i></span></a>
+			</div>
+		</div>
+	</div>
+			
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+	  
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+			  panel.style.display = "none";
+			} else {
+			  panel.style.display = "block";
+			}
+		  });
+		}
+		</script>
+
+		</body>
+</html>
