@@ -8,9 +8,40 @@
 
 #pages{
   margin-top: 8em;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 14%;
+  margin-right: 14%;
 }
+
+.blob{
+  border: 3px white solid;
+  padding: 1em;
+  padding-right: 0em;
+  border-radius: 46% 54% 19% 81% / 64% 42% 58% 36% ;
+}
+
+.blob2{
+  background-color: white;
+  padding-top: 3em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 6em;
+  border-radius: 51% 49% 66% 34% / 39% 54% 46% 61% ;
+}
+
+@media screen and (max-width: 800px) {
+  .blob{
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .blob2{
+    background-color: #F7D8DB;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
 
 /* #F7D8DB - pink
 #FAE0C5 - orange
@@ -47,13 +78,28 @@ ul{
   list-style:circle;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 .page-h2{
-  font-family: 'Bubble';
+  font-family: 'Fredoka One', cursive;
   color: #39393b;
   font-size: 1.75em;
-  margin-top: 1em;
-  letter-spacing: 0.1em;
+  margin-top: 1.5em;
+  margin-bottom: 0.25em;
 }
+
+.center {
+  margin: auto;
+  text-align: center;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 
 .page-h3{
   font-family: 'Montserrat', sans-serif;
@@ -74,8 +120,8 @@ ul{
 #bullet{
   font-family: 'Montserrat', sans-serif;
   color: #39393b;
-  font-size: 0.9em;
   font-weight: 300;
+  line-height: 1.6;
 }
 
 #nav-ul{
@@ -120,7 +166,15 @@ img {
 p {
   font-family: 'Montserrat', sans-serif;
   color: #39393b;
-  font-size: 0.9em;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.about{
+  font-family: 'Fredoka One', cursive;
+  text-shadow: 2px 2px 8px #F7D8DB;
+  color: #39393b;
+  font-size: 1.5em;
   font-weight: 300;
 }
 
@@ -305,12 +359,16 @@ h3 {
   border-radius: 30px;
   padding-left: 10px;
   padding-right: 10px;
+  color: #39393b;
 }
 
 #button-1{
   border: 2px solid #BFE2F1;
   box-shadow: #BFE2F1 4px 4px 0 0;
-  color: #BFE2F1;
+}
+
+#button-1:hover {
+  background-color: #e5f3f9;
 }
 
 #text-1 {
@@ -320,34 +378,45 @@ h3 {
 #button-2{
   border: 2px solid #FAE0C5;
   box-shadow: #FAE0C5 4px 4px 0 0;
-  color: #FAE0C5;
+}
+
+#button-2:hover{
+  background-color: #fdf2e7;
 }
 
 #id-page-h1{
   text-shadow: 2px 2px 8px #FAE0C5;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   font-size: 2.5rem;
 }
 
 #rr-page-h1{
   text-shadow: 2px 2px 8px #BFE2F1;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   font-size: 2.5rem;
 }
+
+#about-page-h1{
+  text-shadow: 2px 2px 8px #F7D8DB;
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-size: 2.5rem;
+}
+
 
 #d-page-h1{
   text-shadow: 2px 2px 8px #C8E9DD;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   font-size: 2.5rem;
 }
 
 #hils-page-h1{
   text-shadow: 2px 2px 8px #D1D3F6;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   font-size: 2.5rem;
 }
 
@@ -358,7 +427,10 @@ h3 {
 #button-3{
   border: 2px solid #C8E9DD;
   box-shadow: #C8E9DD 4px 4px 0 0;
-  color: #C8E9DD;
+}
+
+#button-3:hover{
+  background-color: #e9f6f1;
 }
 
 #text-3 {
@@ -369,7 +441,9 @@ h3 {
 #button-4{
   border: 2px solid #D1D3F6;
   box-shadow: #D1D3F6 4px 4px 0 0;
-  color: #D1D3F6;
+}
+#button-4:hover{
+  background-color: #ecedfb;
 }
 
 #text-4 {
@@ -377,10 +451,6 @@ h3 {
 }
 
 
-
-.button-74:hover {
-  background-color: #fff;
-}
 
 .button-74:active {
   box-shadow: #422800 2px 2px 0 0;
@@ -427,27 +497,19 @@ i {
 }
 
 #dropdown{
-  font-family: 'Bubble';
   background-color: #FAE0C5;
-  letter-spacing: 0.1em;
 }
 
 #dropdown-blue{
-  font-family: 'Bubble';
   background-color: #BFE2F1;
-  letter-spacing: 0.1em;
 }
 
 #dropdown-green{
-  font-family: 'Bubble';
   background-color: #C8E9DD;
-  letter-spacing: 0.1em;
 }
 
 #dropdown-purple{
-  font-family: 'Bubble';
   background-color: #D1D3F6;
-  letter-spacing: 0.1em;
 }
 
 .accordion {
@@ -459,8 +521,10 @@ i {
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
   transition: 0.4s;
+  font-size: medium;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 
@@ -499,7 +563,6 @@ i {
 
 .accordion:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
   color: #777;
   float: right;
   margin-left: 5px;
